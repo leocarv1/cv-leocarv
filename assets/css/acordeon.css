@@ -1,0 +1,190 @@
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border: 1px solid #FFF;
+    border-radius: 1rem;
+    margin: 1rem 0;
+
+    transition: .25s;
+}
+
+.acordeon:hover,
+.acordeon.open {
+    background-color: #55569E;
+    border-color: #55569E;
+}
+
+.acordeon .trigger {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+}
+
+.acordeon .trigger:hover {
+    cursor: pointer;
+}
+
+.acordeon .content {
+    /* padding: 1rem; */
+
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: .25s opacity ease-in-out;
+}
+
+.acordeon.open .content {
+    display: block;
+    height: 100%;
+    opacity: 1;
+    padding: 0 1rem 1rem 2rem;
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.languages li {
+    padding-right: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.languages li i {
+    margin-right: .25rem;
+}
+
+/* Portfolio */
+.portfolio {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+
+}
+
+.portfolio li .title-portfolio {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.portfolio li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.portfolio li a:hover {
+    text-decoration: underline;
+}
+
+.portfolio li span i {
+    margin-right: .5rem;
+}
+
+/* experience */
+.experience {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.experience li{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.experience li:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.experience li span i {
+    margin-right: .5rem;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.skills .tools ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills .tools ul li i {
+    max-width: 50px;
+    margin: 0 .5rem;
+}
+
+.skills .personal-skills ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills .personal-skills ul li {
+    margin-left: .5rem;
+    padding: .5rem;
+}
+
+.title-skills {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .skills {
+        flex-direction: column;
+    }
+
+    .personal-skills {
+        margin: 1.5rem 0;
+    }
+}

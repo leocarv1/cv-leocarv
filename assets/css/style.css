@@ -1,0 +1,118 @@
+@import url('./global.css');
+@import url('./acordeon.css');
+
+body {
+    padding: 1rem;
+    background-color: #000;
+    color: #FFF;
+
+    margin: .5rem;
+    padding: .5rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+
+    background: linear-gradient(-45deg, #0a122a , #586f7c);
+    background-size: 400% 400%;
+
+    animation: gradient 5s ease infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header .title {
+    text-align: center;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+}
+
+.information p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    margin: .5rem;
+}
+
+.information a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.information a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "photo title"
+            "photo information"
+        ;
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 200px;
+    }
+
+    .header .information {
+        grid-area: information;
+    }
+
+}
+
+/* dots */
+.dots {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.dot {
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 3px;
+}

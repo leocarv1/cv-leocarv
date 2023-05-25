@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        max-width: 1024px;
+        margin: .5rem auto !important;
+    }
+}
